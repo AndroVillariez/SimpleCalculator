@@ -64,6 +64,14 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
         } catch (e) {
           result = "Error";
         }
+      } else if (result != '0') {
+        if (buttonText == '×' ||
+            buttonText == "+" ||
+            buttonText == "-" ||
+            buttonText == "÷") {
+          equation = result;
+        }
+        equation = equation + buttonText;
       } else {
         equationFontSize = 48.0;
         resultFontSize = 38.0;
